@@ -30,10 +30,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
 /**
  * PopWindow for Date Pick
  */
@@ -59,7 +55,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
     private int colorCancel;
     private int colorConfirm;
     private int btnTextsize;//text btnTextsize of cancel and confirm button
-    private int viewTextSize=35;
+    private int viewTextSize;
     private boolean showDayMonthYear;
 
     List<String> yearList = new ArrayList();
@@ -86,7 +82,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
         private int colorCancel = Color.parseColor("#999999");
         private int colorConfirm = Color.parseColor("#303F9F");
         private int btnTextSize = 16;//text btnTextsize of cancel and confirm button
-        private int viewTextSize = 35;
+        private int viewTextSize = 25;
 
         public Builder minYear(int minYear){
             this.minYear = minYear;
@@ -250,37 +246,10 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
         for (int i = 0; i < yearCount; i++) {
             yearList.add(format2LenStr(minYear + i));
         }
-        
-        /*
+
         for (int j = 0; j < 12; j++) {
             monthList.add(format2LenStr(j + 1));
         }
-        */
-        monthList.add("January");
-        monthList.add("February");
-        monthList.add("March");
-        monthList.add("April");
-        monthList.add("May");
-        monthList.add("June");
-        monthList.add("July");
-        monthList.add("August");
-        monthList.add("September");
-        monthList.add("October");
-        monthList.add("November");
-        monthList.add("December");
-        
-        /*
-        int[] months = {0,1,2,3,4,5,6,7,8,9,10,11};
-        
-        for (int i = 0; i < months.length; i++) {
-            Calendar cal = Calendar.getInstance();
-            SimpleDateFormat month_date = new SimpleDateFormat("MMMM");
-            cal.set(Calendar.MONTH, months[i]);
-            String month_name = month_date.format(cal.getTime());
-
-            monthList.add(month_name);
-        }*/
-        
 
         yearLoopView.setDataList((ArrayList) yearList);
         yearLoopView.setInitPosition(yearPos);
@@ -438,7 +407,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
     }
 
     public static String getStrDate() {
-        SimpleDateFormat dd = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+        SimpleDateFormat dd = new SimpleDateFormat("yyyy-MM-dd", Locale.CHINA);
         return dd.format(new Date());
     }
 
