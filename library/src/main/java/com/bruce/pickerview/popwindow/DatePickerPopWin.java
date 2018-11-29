@@ -212,6 +212,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
             @Override
             public void onItemSelect(int item) {
                 dayPos = item;
+                 initDayPickerView();
             }
         });
 
