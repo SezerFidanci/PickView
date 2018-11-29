@@ -287,6 +287,19 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
 
         //get max day in month
         dayMaxInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+		
+		if((minYear + yearPos)%4==0 && monthPos==1)
+		{
+			dayMaxInMonth=29;
+		}
+		else if(monthPos==0 ||monthPos==2 ||monthPos==4 ||monthPos==6 ||monthPos==7 ||monthPos==9 ||monthPos==11 ||)
+		{
+			dayMaxInMonth=31;
+		}
+		else
+		{
+			dayMaxInMonth=30;
+		}
 
         for (int i = 0; i < dayMaxInMonth; i++) {
             dayList.add(format2LenStr(i + 1));
