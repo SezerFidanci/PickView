@@ -310,7 +310,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
         }
 
         dayLoopView.setDataList((ArrayList) dayList);
-		dayPos=0;
+		
         dayLoopView.setInitPosition(dayPos);
     }
 
