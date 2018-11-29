@@ -247,9 +247,24 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
             yearList.add(format2LenStr(minYear + i));
         }
 
+		/*
         for (int j = 0; j < 12; j++) {
             monthList.add(format2LenStr(j + 1));
-        }
+        }*/
+		
+		monthList.add("January");
+		monthList.add("February");
+		monthList.add("March");
+		monthList.add("April");
+		monthList.add("May");
+		monthList.add("June");
+		monthList.add("July");
+		monthList.add("August");
+		monthList.add("September");
+		monthList.add("October");
+		monthList.add("November");
+		monthList.add("December");
+		
 
         yearLoopView.setDataList((ArrayList) yearList);
         yearLoopView.setInitPosition(yearPos);
@@ -278,6 +293,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
         }
 
         dayLoopView.setDataList((ArrayList) dayList);
+		dayPos=0;
         dayLoopView.setInitPosition(dayPos);
     }
 
