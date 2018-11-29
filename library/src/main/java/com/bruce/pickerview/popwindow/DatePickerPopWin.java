@@ -55,7 +55,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
     private int colorCancel;
     private int colorConfirm;
     private int btnTextsize;//text btnTextsize of cancel and confirm button
-    private int viewTextSize;
+    private int viewTextSize=35;
     private boolean showDayMonthYear;
 
     List<String> yearList = new ArrayList();
