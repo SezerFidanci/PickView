@@ -292,7 +292,11 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
 		{
 			dayMaxInMonth=29;
 		}
-		else if(monthPos==0 ||monthPos==2 ||monthPos==4 ||monthPos==6 ||monthPos==7 ||monthPos==9 ||monthPos==11 ||)
+		else if(monthPos==1)
+		{
+			dayMaxInMonth=28;
+		}
+		else if(monthPos==0 ||monthPos==2 ||monthPos==4 ||monthPos==6 ||monthPos==7 ||monthPos==9 ||monthPos==11 )
 		{
 			dayMaxInMonth=31;
 		}
