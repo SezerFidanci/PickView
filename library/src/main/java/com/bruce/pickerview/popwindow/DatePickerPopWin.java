@@ -254,7 +254,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
         /*
         for (int j = 0; j < 12; j++) {
             monthList.add(format2LenStr(j + 1));
-        }*/
+        }
         monthList.add("January");
         monthList.add("February");
         monthList.add("March");
@@ -267,7 +267,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
         monthList.add("October");
         monthList.add("November");
         monthList.add("December");
-        
+        */
         
         int[] months = {0,1,2,3,4,5,6,7,8,9,10,11};
         
