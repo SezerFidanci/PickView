@@ -33,7 +33,6 @@ import java.util.Locale;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 /**
  * PopWindow for Date Pick
@@ -212,7 +211,6 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
             @Override
             public void onItemSelect(int item) {
                 dayPos = item;
-                 initDayPickerView();
             }
         });
 
@@ -297,19 +295,15 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
     private void initDayPickerView() {
 
         int dayMaxInMonth;
-        //Calendar calendar = Calendar.getInstance();
+        Calendar calendar = Calendar.getInstance();
         dayList = new ArrayList<String>();
 
-        
-
-        Calendar calendar = new GregorianCalendar(minYear+yearPos, monthPos, 1);
-        calendar.set(Calendar.YEAR,  minYear+yearPos);
+        calendar.set(Calendar.YEAR, minYear + yearPos);
         calendar.set(Calendar.MONTH, monthPos);
-         // Get the number of days in that month
-        dayMaxInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH); 
+
         //get max day in month
-        //dayMaxInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
-        
+        dayMaxInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+
         for (int i = 0; i < dayMaxInMonth; i++) {
             dayList.add(format2LenStr(i + 1));
         }
@@ -328,7 +322,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
         if (!TextUtils.isEmpty(dateStr)) {
 
             long milliseconds = getLongFromyyyyMMdd(dateStr);
-            Calendar calendar = Calendar.getInstance(Locale.US);
+            Calendar calendar = Calendar.getInstance(Locale.CHINA);
 
             if (milliseconds != -1) {
 
