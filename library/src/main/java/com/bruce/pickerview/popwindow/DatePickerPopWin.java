@@ -30,6 +30,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  * PopWindow for Date Pick
  */
@@ -246,10 +250,36 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
         for (int i = 0; i < yearCount; i++) {
             yearList.add(format2LenStr(minYear + i));
         }
-
+        
+        /*
         for (int j = 0; j < 12; j++) {
             monthList.add(format2LenStr(j + 1));
+        }*/
+        monthList.add("January");
+        monthList.add("February");
+        monthList.add("March");
+        monthList.add("April");
+        monthList.add("May");
+        monthList.add("June");
+        monthList.add("July");
+        monthList.add("August");
+        monthList.add("September");
+        monthList.add("October");
+        monthList.add("November");
+        monthList.add("December");
+        
+        
+        int[] months = {0,1,2,3,4,5,6,7,8,9,10,11};
+        
+        for (int i = 0; i < months.length; i++) {
+            Calendar cal = Calendar.getInstance();
+            SimpleDateFormat month_date = new SimpleDateFormat("MMMM");
+            cal.set(Calendar.MONTH, months[i]);
+            String month_name = month_date.format(cal.getTime());
+
+            monthList.add(month_name);
         }
+        
 
         yearLoopView.setDataList((ArrayList) yearList);
         yearLoopView.setInitPosition(yearPos);
