@@ -30,6 +30,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+
 /**
  * PopWindow for Date Pick
  */
@@ -252,6 +253,24 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
             monthList.add(format2LenStr(j + 1));
         }*/
 		
+	    if(Locale.getDefault().getLanguage().equals("tr"))
+	    {
+	    	monthList.add("Ocak");
+		monthList.add("Şubat");
+		monthList.add("Mart");
+		monthList.add("Nisan");
+		monthList.add("Mayıs");
+		monthList.add("Haziran");
+		monthList.add("Temmuz");
+		monthList.add("Ağustos");
+		monthList.add("Eylül");
+		monthList.add("Ekim");
+		monthList.add("Kasım");
+		monthList.add("Aralık");
+	    
+	    }
+	    else
+	    {
 		monthList.add("January");
 		monthList.add("February");
 		monthList.add("March");
@@ -264,6 +283,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
 		monthList.add("October");
 		monthList.add("November");
 		monthList.add("December");
+	    }
 		
 
         yearLoopView.setDataList((ArrayList) yearList);
