@@ -108,7 +108,7 @@ public class LoopView extends View {
             mCanLoop = array.getBoolean(R.styleable.LoopView_canLoop, true);
             mInitPosition = array.getInt(R.styleable.LoopView_initPosition, -1);
             int valueInPixels = (int) getResources().getDimension(R.dimen.textsize);
-            mTextSize = array.getDimensionPixelSize(R.styleable.LoopView_textSize, sp2px(context, valueInPixels));
+            mTextSize = array.getDimensionPixelSize(R.styleable.LoopView_textSize, sp2px(context, 18));
             mDrawItemsCount = array.getInt(R.styleable.LoopView_drawItemCount, 7);
             array.recycle();
         }
