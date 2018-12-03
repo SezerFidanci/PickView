@@ -248,41 +248,43 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
             yearList.add(format2LenStr(minYear + i));
         }
 
-		/*
+
+        /*
         for (int j = 0; j < 12; j++) {
             monthList.add(format2LenStr(j + 1));
-        }*/
-		
+        }
+        */
+
 	    if(Locale.getDefault().getLanguage().equals("tr"))
 	    {
 	    	monthList.add("Ocak");
-		monthList.add("Şubat");
-		monthList.add("Mart");
-		monthList.add("Nisan");
-		monthList.add("Mayıs");
-		monthList.add("Haziran");
-		monthList.add("Temmuz");
-		monthList.add("Ağustos");
-		monthList.add("Eylül");
-		monthList.add("Ekim");
-		monthList.add("Kasım");
-		monthList.add("Aralık");
+            monthList.add("Şubat");
+            monthList.add("Mart");
+            monthList.add("Nisan");
+            monthList.add("Mayıs");
+            monthList.add("Haziran");
+            monthList.add("Temmuz");
+            monthList.add("Ağustos");
+            monthList.add("Eylül");
+            monthList.add("Ekim");
+            monthList.add("Kasım");
+            monthList.add("Aralık");
 	    
 	    }
 	    else
 	    {
-		monthList.add("January");
-		monthList.add("February");
-		monthList.add("March");
-		monthList.add("April");
-		monthList.add("May");
-		monthList.add("June");
-		monthList.add("July");
-		monthList.add("August");
-		monthList.add("September");
-		monthList.add("October");
-		monthList.add("November");
-		monthList.add("December");
+            monthList.add("January");
+            monthList.add("February");
+            monthList.add("March");
+            monthList.add("April");
+            monthList.add("May");
+            monthList.add("June");
+            monthList.add("July");
+            monthList.add("August");
+            monthList.add("September");
+            monthList.add("October");
+            monthList.add("November");
+            monthList.add("December");
 	    }
 		
 

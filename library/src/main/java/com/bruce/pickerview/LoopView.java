@@ -138,18 +138,19 @@ public class LoopView extends View {
             throw new IllegalArgumentException("data list must not be null!");
         }
         mTopBottomTextPaint.setColor(mTopBottomTextColor);
-        mTopBottomTextPaint.setAntiAlias(true);
-        mTopBottomTextPaint.setTypeface(Typeface.MONOSPACE);
+       mTopBottomTextPaint.setAntiAlias(true);
+      mTopBottomTextPaint.setTypeface(Typeface.MONOSPACE);
         mTopBottomTextPaint.setTextSize(mTextSize);
 
         mCenterTextPaint.setColor(mCenterTextColor);
         mCenterTextPaint.setAntiAlias(true);
-        mCenterTextPaint.setTextScaleX(1.05F);
+      mCenterTextPaint.setTextScaleX(1.05F);
         mCenterTextPaint.setTypeface(Typeface.MONOSPACE);
-        mCenterTextPaint.setTextSize(mTextSize);
+        mCenterTextPaint.setTextAlign(Paint.Align.LEFT);
+       mCenterTextPaint.setTextSize(mTextSize);
 
         mCenterLinePaint.setColor(mCenterLineColor);
-        mCenterLinePaint.setAntiAlias(true);
+       mCenterLinePaint.setAntiAlias(true);
         mCenterLinePaint.setTypeface(Typeface.MONOSPACE);
         mCenterLinePaint.setTextSize(mTextSize);
 
@@ -268,8 +269,8 @@ public class LoopView extends View {
         }
 
         //draw top and bottom line
-        canvas.drawLine(0.0F, mTopLineY, mWidgetWidth, mTopLineY, mCenterLinePaint);
-        canvas.drawLine(0.0F, mBottomLineY, mWidgetWidth, mBottomLineY, mCenterLinePaint);
+       // canvas.drawLine(0.0F, mTopLineY, mWidgetWidth, mTopLineY, mCenterLinePaint);
+       // canvas.drawLine(0.0F, mBottomLineY, mWidgetWidth, mBottomLineY, mCenterLinePaint);
 
         count = 0;
         int changingLeftY = (int) (mTotalScrollY % (mItemHeight));
