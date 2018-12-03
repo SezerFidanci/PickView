@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:canLoop="false"
-                    app:textSize="14sp" />
+                    app:textSize="@dimen/textsize" />
 
                 <com.bruce.pickerview.LoopView
                     android:id="@+id/picker_month"
@@ -65,7 +65,7 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     app:canLoop="false"
-                    app:textSize="14sp" />
+                    app:textSize="@dimen/textsize" />
 
                 <com.bruce.pickerview.LoopView
                     android:id="@+id/picker_day"
@@ -74,7 +74,7 @@
                     android:layout_marginLeft="1dp"
                     android:layout_weight="1"
                     app:canLoop="false"
-                    app:textSize="14sp" />
+                    app:textSize="@dimen/textsize" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
